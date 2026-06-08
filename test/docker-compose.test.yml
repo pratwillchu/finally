@@ -1,0 +1,22 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - test-db:/app/db
+    environment:
+      - LLM_MOCK=true
+      - MASSIVE_API_KEY=
+      - OPENROUTER_API_KEY=test-key-not-needed
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+
+volumes:
+  test-db:

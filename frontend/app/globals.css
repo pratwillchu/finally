@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #0d1117;
+  --color-bg-secondary: #161b22;
+  --color-bg-tertiary: #21262d;
+  --color-text-primary: #e6edf3;
+  --color-text-secondary: #8b949e;
+  --color-accent-yellow: #ecad0a;
+  --color-accent-blue: #209dd7;
+  --color-accent-purple: #753991;
+  --color-market-up: #3fb950;
+  --color-market-down: #f85149;
+  --color-border-default: #30363d;
+}
+
+body {
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+.price-flash-up {
+  animation: flashUp 600ms ease-out forwards;
+}
+.price-flash-down {
+  animation: flashDown 600ms ease-out forwards;
+}
+@keyframes flashUp {
+  0% { background-color: rgba(63, 185, 80, 0.35); }
+  100% { background-color: transparent; }
+}
+@keyframes flashDown {
+  0% { background-color: rgba(248, 81, 73, 0.35); }
+  100% { background-color: transparent; }
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #161b22; }
+::-webkit-scrollbar-thumb { background: #30363d; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #484f58; }

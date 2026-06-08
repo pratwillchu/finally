@@ -1,0 +1,26 @@
+# Python
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/.pytest_cache/
+backend/tests/
+**/*.pyc
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Database
+db/finally.db
+
+# Git / IDE
+.git/
+.claude/
+.env
+*.md
+
+# Test artifacts
+test/node_modules/
+test/playwright-report/
+test/test-results/
